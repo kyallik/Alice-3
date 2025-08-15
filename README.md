@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: pink;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 2em;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        #sim {
+            background-color: lightgreen;
+        }
+        #nao {
+            background-color: lightcoral;
+            position: relative;
+        }
+        #mensagem {
+            font-size: 1.5em;
+            color: purple;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alice, quer namorar comigo? ❤️</h1>
+    <button id="sim">Sim</button>
+    <button id="nao">Não</button>
+    <div id="mensagem"></div>
+
+    <script>
+        const simBtn = document.getElementById("sim");
+        const naoBtn = document.getElementById("nao");
+        const mensagem = document.getElementById("mensagem");
+
+        simBtn.addEventListener("click", () => {
+            mensagem.textContent = "Boa garota 😏❤️";
+        });
+
+        naoBtn.addEventListener("click", () => {
+            naoBtn.style.display = "none";
+        });
+    </script>
+</body>
+</html>
